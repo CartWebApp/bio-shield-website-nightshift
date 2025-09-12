@@ -5,6 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio Shield</title>
     <link rel="stylesheet" href="styles.css">
-    <img src="graphics/front-page/bug-sprayed.svg" alt="A simplistic picture of a mosquito getting sprayed" width="300">
 </head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li class="logo">
+                <a href="index.html">
+                    <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
+                </a>
+            </li>
+            <div class="nav-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </div>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Welcome to Bio Shield</h1>
+            <p>Protecting your space with eco-friendly solutions</p>
+            <a href="products.html" class="hero-btn">Explore Products</a>
+        </div>
+    </section>
+
+    <!-- Intro Section (with background image behind text) -->
+    <section class="intro-overlay">
+        <div class="intro-text">
+            <h2>About Bio Shield</h2>
+            <p>
+                At Bio Shield, we believe in creating safer, healthier environments for families, 
+                businesses, and communities. Our eco-friendly solutions are designed to protect 
+                your space from harmful pests while preserving the balance of nature.
+            </p>
+            <p>
+                With science-backed innovation and a commitment to sustainability, Bio Shield 
+                delivers powerful protection you can trust. Whether at home or in the workplace, 
+                our products ensure peace of mind without compromise.
+            </p>
+        </div>
+    </section>
+
+    <!-- New Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="graphics/front-page/bug-sprayed.svg" alt="Satisfaction">
+            <p>100% Satisfaction Rate</p>
+        </div>
+        <div class="feature">
+            <img src="graphics/front-page/eco.svg" alt="Eco Friendly">
+            <p>Eco-Friendly & Safe</p>
+        </div>
+        <div class="feature">
+            <img src="graphics/front-page/feature3.png" alt="Trusted">
+            <p>Trusted by Families & Businesses</p>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop">↑ Top</button>
+
+    <script>
+        // Back to top button logic
+        const backToTop = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        };
+        backToTop.onclick = function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+
+        // Feature scroll animations
+        const features = document.querySelectorAll(".feature");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.3 });
+
+        features.forEach(feature => {
+            observer.observe(feature);
+        });
+    </script>
+</body>
 </html>
