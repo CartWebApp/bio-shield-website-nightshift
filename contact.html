@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Bio Shield</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li class="logo">
+        <a href="index.html">
+          <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
+        </a>
+      </li>
+      <div class="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Reach out through any of the methods below or send us a message directly:</p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Email</h2>
+        <p>support@bioshield.com</p>
+        <p>sales@bioshield.com</p>
+      </div>
+
+      <div class="contact-info">
+        <h2>Phone</h2>
+        <p>+1 (555) 123-4567</p>
+        <p>+1 (555) 987-6543</p>
+      </div>
+
+      <div class="contact-info">
+        <h2>Social Media</h2>
+        <p><a href="#">Facebook: @BioShieldOfficial</a></p>
+        <p><a href="#">Twitter: @BioShieldEco</a></p>
+        <p><a href="#">Instagram: @BioShieldLife</a></p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">↑ Top</button>
+
+  <script>
+    // Back to top button logic
+    const backToTop = document.getElementById("backToTop");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    };
+    backToTop.onclick = function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+</body>
+</html>

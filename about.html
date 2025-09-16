@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Bio Shield</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li class="logo">
+        <a href="index.html">
+          <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
+        </a>
+      </li>
+      <div class="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
+      <div class="hero-overlay">
+        <h1>About Bio Shield</h1>
+        <p>Our story, mission, and commitment to protecting what matters most.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content">
+    <div class="about-block">
+      <h2>What we are</h2>
+      <p>
+        BioShield™ is a leading provider of advanced pest control solutions dedicated to delivering effective, 
+        reliable, and environmentally responsible insect repellents. Since our founding in 2015, we have focused on 
+        developing scientifically backed formulations that combine efficacy with safety, ensuring protection for both your 
+        home and family.
+
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Our Products</h2>
+      <p>
+        Our products are meticulously crafted using a blend of proven active ingredients and natural components, 
+        designed to target a wide range of common household pests including mosquitoes, ants, ticks, and spiders. 
+        Manufactured under stringent quality control standards in the USA, BioShield™ offers industry-leading performance 
+        with minimal environmental impact.
+
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Our Partners</h2>
+      <p>
+        Committed to innovation and customer satisfaction, BioShield™ partners with experts in entomology and environmental science to continually enhance product effectiveness. We prioritize transparency, safety, and sustainability in all aspects of our business.
+
+      </p>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">↑ Top</button>
+
+  <script>
+    // Back to top button logic
+    const backToTop = document.getElementById("backToTop");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    };
+    backToTop.onclick = function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+</body>
+</html>

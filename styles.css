@@ -33,10 +33,16 @@ body {
     flex: 1;
 }
 .nav-logo {
-    height: 60px; /* bigger logo */
+    height: 60px;
     width: auto;
     display: block;
+
+    background-color: rgb(107, 163, 247);   /* white square background */
+    padding: 8px;              /* space between image and edges */
+    border-radius: 8px;        /* optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* optional: subtle shadow */
 }
+
 
 /* Nav links container */
 .navbar .nav-links {
@@ -260,3 +266,193 @@ body {
         max-width: 100%;
     }
 }
+
+/* About Page Content */
+.about-content {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+.about-block {
+  margin-bottom: 60px;
+}
+.about-block h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #094989;
+}
+.about-block p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Contact Page */
+.contact {
+    margin-top: 120px; /* space for navbar */
+    padding: 60px 20px;
+    text-align: center;
+    background: #f8f9fa;
+  }
+  
+  .contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #094989;
+  }
+  
+  .contact p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 250px;
+  }
+  
+  .contact-info h2 {
+    color: #1abc9c;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p {
+    margin: 8px 0;
+    color: #333;
+  }
+  
+  .contact-info a {
+    color: #094989;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    color: #1abc9c;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  /* Contact Form */
+.contact-form {
+    margin-top: 60px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    color: #094989;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    padding: 12px;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background: #16a085;
+  }
+  
+  /* Products Page */
+.products {
+    margin-top: 120px; /* account for navbar */
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .products h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #094989;
+  }
+  
+  .products-intro {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: #555;
+  }
+  
+  .product-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .product-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #094989;
+  }
+  
+  .product-card p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
