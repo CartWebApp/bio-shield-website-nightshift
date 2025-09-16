@@ -15,11 +15,11 @@
           <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
         </a>
       </li>
-      <div class="nav-links">
+      <ul class="nav-links">
         <li><a href="about.html">About Us</a></li>
         <li><a href="products.html" class="active">Products</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-      </div>
+      </ul>
     </ul>
   </nav>
 
@@ -28,30 +28,35 @@
     <h1>Our Product Line</h1>
     <p class="products-intro">Explore our eco-friendly Bio Shield solutions designed to keep your home and business safe.</p>
     
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="graphics/products/product1.png" alt="Bio Shield Spray">
-        <h2>Bio Shield Home Spray</h2>
-        <p>A safe, eco-friendly pest control spray designed for everyday household protection.</p>
-      </div>
-      <div class="product-card">
-        <img src="graphics/products/product2.png" alt="Bio Shield Outdoor">
-        <h2>Bio Shield Outdoor Guard</h2>
-        <p>Long-lasting outdoor protection that keeps your yard and garden free of harmful pests.</p>
-      </div>
-      <div class="product-card">
-        <img src="graphics/products/product3.png" alt="Bio Shield Pro">
-        <h2>Bio Shield Pro</h2>
-        <p>A professional-grade formula trusted by businesses for maximum pest protection.</p>
-      </div>
-    </div>
+    <ul class="product-grid">
+      <li>
+        <article class="product-card">
+          <img src="graphics/products/product1.png" alt="Bio Shield Spray">
+          <h2>Bio Shield Home Spray</h2>
+          <p>A safe, eco-friendly pest control spray designed for everyday household protection.</p>
+        </article>
+      </li>
+      <li>
+        <article class="product-card">
+          <img src="graphics/products/product2.png" alt="Bio Shield Outdoor">
+          <h2>Bio Shield Outdoor Guard</h2>
+          <p>Long-lasting outdoor protection that keeps your yard and garden free of harmful pests.</p>
+        </article>
+      </li>
+      <li>
+        <article class="product-card">
+          <img src="graphics/products/product3.png" alt="Bio Shield Pro">
+          <h2>Bio Shield Pro</h2>
+          <p>A professional-grade formula trusted by businesses for maximum pest protection.</p>
+        </article>
+      </li>
+    </ul>
   </section>
 
   <!-- Back to Top Button -->
   <button id="backToTop">↑ Top</button>
 
   <script>
-    // Reuse Back to Top button functionality
     const backToTop = document.getElementById("backToTop");
     window.onscroll = function() {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
