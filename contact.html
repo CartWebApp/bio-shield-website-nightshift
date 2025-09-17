@@ -15,6 +15,7 @@
           <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
         </a>
       </li>
+      <li class="hamburger">☰</li>
       <ul class="nav-links">
         <li><a href="about.html">About Us</a></li>
         <li><a href="products.html">Products</a></li>
@@ -79,6 +80,23 @@
     backToTop.onclick = function() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
+
+    // Hamburger toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
   </script>
 </body>
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Bio Shield. All rights reserved.</p>
+  <nav class="footer-nav">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="products.html">Products</a> |
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</footer>
 </html>

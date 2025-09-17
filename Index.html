@@ -15,6 +15,7 @@
                     <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
                 </a>
             </li>
+            <li class="hamburger">☰</li>
             <ul class="nav-links">
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="products.html">Products</a></li>
@@ -48,21 +49,64 @@
         </section>
     </header>
 
-    <!-- Features Section -->
-    <section class="features">
-        <article class="feature">
-            <img src="graphics/front-page/bug-sprayed.svg" alt="Satisfaction">
-            <p>100% Satisfaction Rate</p>
-        </article>
-        <article class="feature">
-            <img src="graphics/front-page/eco.svg" alt="Eco Friendly">
-            <p>Eco-Friendly & Safe</p>
-        </article>
-        <article class="feature">
-            <img src="graphics/front-page/trusted.svg" alt="Trusted">
-            <p>Trusted by Families & Businesses</p>
-        </article>
-    </section>
+        <!-- Features Section -->
+        <section class="features">
+            <article class="feature">
+                <img src="graphics/front-page/bug-sprayed.svg" alt="Satisfaction">
+                <p>100% Satisfaction Rate</p>
+            </article>
+            <article class="feature">
+                <img src="graphics/front-page/eco.svg" alt="Eco Friendly">
+                <p>Eco-Friendly & Safe</p>
+            </article>
+            <article class="feature">
+                <img src="graphics/front-page/trusted.svg" alt="Trusted">
+                <p>Trusted by Families & Businesses</p>
+            </article>
+        </section>
+    
+        <!-- Product Previews -->
+        <section class="products">
+            <h1>Featured Products</h1>
+            <p class="products-intro">Discover a few of our most popular Bio Shield solutions.</p>
+            <ul class="product-grid">
+                <li>
+                    <article class="product-card">
+                        <img src="graphics/products/product1.png" alt="Bio Shield Spray">
+                        <h2>Bio Shield Home Spray</h2>
+                        <p>A safe, eco-friendly pest control spray designed for everyday household protection.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="product-card">
+                        <img src="graphics/products/product2.png" alt="Bio Shield Outdoor">
+                        <h2>Bio Shield Outdoor Guard</h2>
+                        <p>Long-lasting outdoor protection that keeps your yard and garden free of harmful pests.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="product-card">
+                        <img src="graphics/products/product3.png" alt="Bio Shield Pro">
+                        <h2>Bio Shield Pro</h2>
+                        <p>A professional-grade formula trusted by businesses for maximum pest protection for at least 24 hours.</p>
+                    </article>
+                </li>
+            </ul>
+            <a href="products.html" class="hero-btn view-all-btn">View All Products</a>
+
+        </section>
+    
+        <!-- Our Mission -->
+        <section class="about-content">
+            <article class="about-block">
+                <h2>Our Mission</h2>
+                <p>
+                    At Bio Shield, our mission is to protect homes, families, and communities with safe, 
+                    eco-conscious pest control solutions. We are committed to blending science and sustainability 
+                    to deliver powerful protection while caring for the planet.
+                </p>
+            </article>
+        </section>   
 
     <!-- Back to Top Button -->
     <button id="backToTop">↑ Top</button>
@@ -94,6 +138,23 @@
         features.forEach(feature => {
             observer.observe(feature);
         });
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
     </script>
 </body>
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 Bio Shield. All rights reserved.</p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="products.html">Products</a> |
+      <a href="contact.html">Contact Us</a>
+    </nav>
+</footer>  
 </html>

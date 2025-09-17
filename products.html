@@ -15,6 +15,7 @@
           <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
         </a>
       </li>
+      <li class="hamburger">☰</li>
       <ul class="nav-links">
         <li><a href="about.html">About Us</a></li>
         <li><a href="products.html" class="active">Products</a></li>
@@ -24,10 +25,12 @@
   </nav>
 
   <!-- Products Section -->
-  <section class="products">
-    <h1>Our Product Line</h1>
-    <p class="products-intro">Explore our eco-friendly Bio Shield solutions designed to keep your home and business safe.</p>
-    
+  <main class="products">
+    <h1>Our Products</h1>
+    <p class="products-intro">
+      Explore the full Bio Shield product line, designed for safe and effective protection.
+    </p>
+
     <ul class="product-grid">
       <li>
         <article class="product-card">
@@ -43,20 +46,37 @@
           <p>Long-lasting outdoor protection that keeps your yard and garden free of harmful pests.</p>
         </article>
       </li>
-      <li>
+      <li> 
         <article class="product-card">
           <img src="graphics/products/product3.png" alt="Bio Shield Pro">
           <h2>Bio Shield Pro</h2>
           <p>A professional-grade formula trusted by businesses for maximum pest protection.</p>
         </article>
       </li>
+      <!-- New Product 1 -->
+      <li>
+        <article class="product-card">
+          <img src="graphics/products/product4.png" alt="Bio Shield Fabric">
+          <h2>Bio Shield Fabric</h2>
+          <p>A fabric-safe spray that creates a protective barrier on clothing and gear against insects.</p>
+        </article>
+      </li>
+      <!-- New Product 2 -->
+      <li>
+        <article class="product-card">
+          <img src="graphics/products/product5.png" alt="Bio Shield Defense">
+          <h2>Bio Shield Defense</h2>
+          <p>An all-natural insect repellent spray that provides up to 8 hours of protection.</p> 
+        </article>
+      </li>
     </ul>
-  </section>
+  </main>
 
   <!-- Back to Top Button -->
   <button id="backToTop">↑ Top</button>
 
   <script>
+    // Back to top button logic
     const backToTop = document.getElementById("backToTop");
     window.onscroll = function() {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -68,6 +88,23 @@
     backToTop.onclick = function() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
+
+    // Hamburger toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
   </script>
 </body>
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Bio Shield. All rights reserved.</p>
+  <nav class="footer-nav">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="products.html">Products</a> |
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</footer>
 </html>

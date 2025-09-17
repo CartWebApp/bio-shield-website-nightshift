@@ -15,6 +15,7 @@
           <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
         </a>
       </li>
+      <li class="hamburger">☰</li>
       <ul class="nav-links">
         <li><a href="about.html" class="active">About Us</a></li>
         <li><a href="products.html">Products</a></li>
@@ -56,9 +57,12 @@
     </article>
 
     <article class="about-block">
-      <h2>Our Partners</h2>
+      <h2>Our Backstory</h2>
       <p>
-        Committed to innovation and customer satisfaction, BioShield™ partners with experts in entomology and environmental science to continually enhance product effectiveness. We prioritize transparency, safety, and sustainability in all aspects of our business.
+        The inception of BioShield™ was driven by a personal experience of our founder, Jane Doe, who sought a safer 
+        alternative to conventional chemical repellents after witnessing the adverse effects they had on her family. 
+        Motivated by a passion for health and sustainability, Jane assembled a team of experts in chemistry, biology, 
+        and environmental science to create a line of products that would set new standards in pest control.
       </p>
     </article>
   </main>
@@ -79,6 +83,23 @@
     backToTop.onclick = function() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
+
+    // Hamburger toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
   </script>
 </body>
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Bio Shield. All rights reserved.</p>
+  <nav class="footer-nav">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="products.html">Products</a> |
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</footer>
 </html>

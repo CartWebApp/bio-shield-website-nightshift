@@ -456,3 +456,106 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   }
   
+  ul {
+    list-style-type: none; /* Removes the bullet points */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+  }
+
+/* Footer */
+.footer {
+  background-color: #094989;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 60px;
+}
+
+.footer-nav {
+  margin-top: 10px;
+}
+
+.footer-nav a {
+  color: #1abc9c;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #16a085;
+}
+
+.view-all-btn {
+  display: inline-block;
+  margin-top: 40px; /* pushes button further down */
+}
+
+/* -------------------------
+   Mobile hamburger: hidden by default, only shown on small screens
+   Add this at the end of styles.css so it overrides earlier rules
+   ------------------------- */
+
+/* hide hamburger on desktop by default */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  line-height: 1;
+}
+
+/* Ensure nav-links appear as list on desktop (keeps existing layout) */
+.navbar .nav-links {
+  display: flex; /* keeps your desktop layout */
+  align-items: center;
+  gap: 20px;
+}
+
+/* Mobile-only: show hamburger and collapse links into a vertical menu */
+@media (max-width: 480px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;                /* hide by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    background: #094989;
+    padding: 10px 0;
+    margin: 10px 0 0 0;
+    gap: 0;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;                /* shown when .show is toggled */
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+
+  /* small tweak for logo area so nav-items don't jam */
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* make sure hero, features and other elements scale nicely on very small screens */
+  .hero-overlay h1 { font-size: 1.6rem; }
+  .hero-overlay p, .intro-text p { font-size: 0.95rem; }
+}
