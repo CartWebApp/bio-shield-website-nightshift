@@ -55,7 +55,10 @@
     <!-- Contact Form -->
     <section class="contact-form">
       <h2>Send Us a Message</h2>
-      <form action="#" method="post">
+      <form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
+        <!-- Hidden input so Netlify recognizes this form -->
+        <input type="hidden" name="form-name" value="contact">
+
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
@@ -89,6 +92,7 @@
     });
   </script>
 </body>
+
 <!-- Footer -->
 <footer class="footer">
   <p>&copy; 2025 Bio Shield. All rights reserved.</p>
