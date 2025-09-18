@@ -156,7 +156,6 @@ body {
   border-radius: 5px;
   transition: background 0.3s ease;
   margin-top: 20px; /* space above button */
-  position: relative;
 }
 .hero-btn:hover {
     background: #16a085;
