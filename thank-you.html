@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Bio Shield</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li class="logo">
+        <a href="index.html">
+          <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
+        </a>
+      </li>
+      <li class="hamburger">☰</li>
+      <ul class="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </ul>
+  </nav>
+
+  <!-- Thank You Content -->
+  <main class="contact">
+    <h1>Thank You!</h1>
+    <p>Your message has been received. We’ll get back to you as soon as possible.</p>
+    <a href="index.html" class="hero-btn" style="margin-top:30px;">Return Home</a>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">↑ Top</button>
+
+  <script>
+    // Back to top button logic
+    const backToTop = document.getElementById("backToTop");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    };
+    backToTop.onclick = function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // Hamburger toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Bio Shield. All rights reserved.</p>
+  <nav class="footer-nav">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="products.html">Products</a> |
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</footer>
+</html>
