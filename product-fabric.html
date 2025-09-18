@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio Shield Fabric</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li class="logo">
+        <a href="index.html">
+          <img src="graphics/front-page/Logo.png" alt="Bio Shield Logo" class="nav-logo">
+        </a>
+      </li>
+      <li class="hamburger">☰</li>
+      <ul class="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <section class="overlay">
+      <section class="hero-overlay">
+        <img src="graphics/products/product4.png" alt="Bio Shield Fabric" style="max-width:200px; margin-bottom:20px;">
+        <h1>Bio Shield Fabric</h1>
+        <p>Fabric-safe spray for clothing, gear, and outdoor adventures.</p>
+      </section>
+    </section>
+  </header>
+
+  <!-- Product Details -->
+  <main class="about-content">
+    <article class="about-block">
+      <h2>About Bio Shield Fabric</h2>
+      <p>
+        Bio Shield Fabric is specially designed to provide a protective barrier against insects 
+        on clothing, backpacks, and camping gear. Whether you’re hiking, camping, or spending 
+        time outdoors, this formula safeguards you without damaging fabrics or altering their feel.
+      </p>
+    </article>
+
+    <article class="about-block">
+      <h2>Key Benefits</h2>
+      <ul>
+        <li>Protects against mosquitoes, ticks, and chiggers.</li>
+        <li>Safe to use on most fabrics including cotton, polyester, and nylon.</li>
+        <li>Non-greasy, odor-neutral formula won’t stain clothes.</li>
+        <li>Ideal for camping gear, outdoor apparel, and sports uniforms.</li>
+      </ul>
+    </article>
+
+    <article class="about-block">
+      <h2>How to Use</h2>
+      <p>
+        Hold bottle 6–8 inches from fabric and apply an even spray until slightly damp. 
+        Allow treated fabric to dry completely before wearing. Reapply after washing or 
+        heavy outdoor use. Do not apply directly onto skin.
+      </p>
+    </article>
+
+    <article class="about-block">
+      <h2>Ingredients / Formula</h2>
+      <ul>
+        <li>Eucalyptus Oil – naturally repels ticks and mosquitoes.</li>
+        <li>Citronella Extract – adds extra defense against biting insects.</li>
+        <li>Plant-Derived Binder – helps formula adhere to fabric fibers.</li>
+        <li>Water-Based Carrier – ensures safe application without residue.</li>
+      </ul>
+    </article>
+
+    <a href="products.html" class="hero-btn">← Back to Products</a>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">↑ Top</button>
+
+  <script>
+    // Back to top button logic
+    const backToTop = document.getElementById("backToTop");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    };
+    backToTop.onclick = function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // Hamburger toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Bio Shield. All rights reserved.</p>
+  <nav class="footer-nav">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="products.html">Products</a> |
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</footer>
+</html>
