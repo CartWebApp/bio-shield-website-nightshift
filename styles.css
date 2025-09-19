@@ -583,3 +583,7 @@ body {
   height: auto;
   box-shadow: black 0px 4px 8px;
 }
+
+a {
+  text-decoration: none;
+}
