@@ -68,7 +68,7 @@ Advertise products
 
 1. Used Adobe Firefly to generate and edit SVG files
 
-Final Images: <img src="graphics/front-page/bug-sprayed.svg"> <img src="graphics/front-page/eco.svg"> <img src="graphics/front-page/Trusted.svg">
+Final Images: <img src="graphics/front-page/bug-sprayed.svg"> <img src="graphics/front-page/eco.svg"> <img src="graphics/front-page/trusted.svg">
 
 2. Chat logs: 
 
